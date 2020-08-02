@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Container, SnackButton, SnackButtonText } from "./styles";
+import { Container, SnackButton } from "./styles";
 import SnackBar from "../../components/SnackBar";
 
 const Main: React.FC = () => {
@@ -8,9 +8,10 @@ const Main: React.FC = () => {
 
   return (
     <Container>
-      <SnackButton onPress={() => setVisible(true)}>
-        <SnackButtonText>Pressione para mostra a Snackbar</SnackButtonText>
-      </SnackButton>
+      <SnackButton
+        title="Pressione para mostra a Snackbar"
+        onPress={() => setVisible(true)}
+      />
 
       {visible && (
         <SnackBar
